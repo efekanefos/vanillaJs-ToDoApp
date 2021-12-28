@@ -6,13 +6,22 @@
   box-sizing: border-box;
 }
 
-body {
+html {
+  min-height: 100%;
+  min-width: 100%;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
   font-family: "Poppins", sans-serif;
   background: linear-gradient(120deg, #e2c35d, #d88771);
+  object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  min-height: 100vh;
+}
+body {
+  /* Set up positioning */
 }
 
 header {
@@ -35,6 +44,7 @@ form button {
   border: none;
   background-color: #fff;
 }
+
 form button {
   margin-left: -0.5rem;
 }
@@ -53,7 +63,9 @@ form button:hover {
   color: #fff;
   background-color: #d88771;
 }
-
+.todo-button {
+  width: 4rem;
+}
 .todo-container {
   display: flex;
   justify-content: center;
@@ -64,7 +76,7 @@ form button:hover {
   list-style: none;
 }
 .todo {
-  min-width: 30rem;
+  min-width: 20%;
   margin: 0.5rem;
   background-color: #fff;
   color: black;
@@ -149,5 +161,18 @@ select {
   .formBox {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form input {
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  .inputBox {
+    width: calc(90% - 4rem);
+    margin: 0 auto;
+    display: block;
   }
 }
